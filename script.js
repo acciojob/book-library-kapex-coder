@@ -39,13 +39,13 @@ const books = [
 const bookLibraryDiv = document.getElementById("book-library");
 
 books.forEach((book) => {
-  const bookDiv = document.createElement("article");
+  const bookDiv = document.createElement("div");
   bookDiv.className = "book";
   bookDiv.innerHTML = `
     <img src="${book.img}" alt="${book.alt}" class="book-cover"/>
     <h2 class="book-title">${book.title}</h2>
     <p class="book-author">by ${book.author}</p>
-    <p class="book-price">${book.price.prefix} ${book.price.amount}</p>
+    <div class="book-price">${book.price.prefix} ${book.price.amount}</p>
   `;
   bookLibraryDiv.appendChild(bookDiv);
 });
